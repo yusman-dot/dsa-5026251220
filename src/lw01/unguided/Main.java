@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) throws FileNotFoundException {
-        List<WashService> jobs = new ArrayList<>();
+        List<WashService> washes = new ArrayList<>();
         Scanner yusman = new Scanner(new File("washes.txt"));
 
         while (yusman.hasNext()) {
@@ -17,15 +17,15 @@ public class Main {
             int days = yusman.nextInt();
 
             if (type.equals("CAR")) {
-                jobs.add(new CarWash(id, days));
+                washes.add(new CarWash(id, days));
             } else if (type.equals("MOTORCYCLE")) {
-                jobs.add(new MotorcycleWash(id, days));
+                washes.add(new MotorcycleWash(id, days));
             }
         }
         yusman.close();
 
-        for (WashService job : jobs) {
-            System.out.println(job.summary());
+        for (WashService wash : washes) {
+            System.out.println(wash.summary());
         }
     }
 }
