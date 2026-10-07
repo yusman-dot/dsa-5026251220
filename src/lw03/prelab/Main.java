@@ -16,7 +16,6 @@ public class Main {
         problem3();
     }
 
-    // Problem 1: Playlist managed with a List<String>
     public static void problem1() {
         List<String> playlist = new ArrayList<>();
 
@@ -130,5 +129,6 @@ public class Main {
             System.out.println(entry.getKey() + ": " + entry.getValue());
         }
         System.out.println("Failed sales: " + failedSales);
+        
     }
 }
